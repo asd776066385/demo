@@ -46,11 +46,6 @@ public class TestNode {
     }
 
 
-    //  反转
-    private static Node reverseNode2(Node cur) {
-        return cur;
-    }
-
     // 交换相邻的链表节点
     public static Node swapNode(Node node) {
         if (node == null || node.next == null) {
@@ -63,6 +58,19 @@ public class TestNode {
         return res;
     }
 
+    // k个一组逆序
+
+
+    // 约瑟夫问题
+    public static void yuesefu(Node node){
+        Node tmp = node;
+        while (true) {
+            if (tmp.next == null) {
+                break;
+            }
+            tmp = tmp.next;
+        }
+    }
 
     public static void main(String[] args) {
         for (int i = 1; i < 5; i++) {
@@ -71,7 +79,8 @@ public class TestNode {
         showNode(head);
         System.out.println("*****************");
 //        showNode(swapNode(head));
-        showNode(reverseNode2(head));
+        System.out.println("*****************");
+        yuesefu(head);
     }
 
 }
